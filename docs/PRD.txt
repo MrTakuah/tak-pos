@@ -1,0 +1,96 @@
+# Tak POS
+
+## Context
+
+This project's goal is to learn how to code. I am building a mock point-of-sale system as this is a project I’ve worked on in my professional career. This will allow me to apply coding concepts to solving real-world business problems. 
+
+## Goals & Key Performance Indicators
+
+Goals
+
+- A functional app with a Front End, a backend, and architect-ed for future integrations (like payment systems, HR systems, ecomm, etc.)
+
+## Constraints
+
+- Limited development time
+- Novice coder (I am learning - the literal point of this exercise)
+- Must be about to run everything locally
+- 
+
+## Assumptions
+
+- Front-end work is coded in Javascript Node and/or Typescript
+- Back-end work is coded in C# .net
+- Will utilize APIs
+- Will use a data base (Azure Data Studio)
+
+## Features
+
+- Order taking - Allow a user to input a customers order. (like when they call or walk in) This is an application in the product
+    - Customer details input
+    - Menu selection
+    - Ability to calculate cash payments
+    - Ability to add discounts like a coupon (later phase)
+    - Ability to print a digital receipt
+- Order making - Allow a user to view the orders currently waiting to be made. this is an application in the product
+    - show list of orders that need to be made
+    - Allow user to "bump" the item off once completed (to track the item has been made)
+    - Show a timer for how long the order has been in the queue
+- Order Delivery - Allow a user to view the orders currently waiting to be delivered. this is an application in the product
+    - show list of orders that need to be delivered
+    - Show list of drivers available to deliver the order
+    - Allow user to select a driver to deliver the order
+- Team member management - Allow a manager to create, edit, and delete team members. this is an application in the product  
+    - Allow a manager to create a new team member
+    - Allow a manager to edit a team member
+    - Allow a manager to delete a team member   
+- Time Clock - Allow team members to clock in and clock out. this is an application in the product   
+    - Allow a team member to clock in
+    - Allow a team member to clock out
+    - Show a timer for how long the team member has been clocked in
+- Inventory Management - Allow a manager to view the inventory and add/remove items. this is an application in the product
+    - Allow a manager to view the inventory
+    - Allow a manager to add an item to the inventory
+    - Allow a manager to remove an item from the inventory
+    - Tie selling products to inventory (so when a product is sold, the inventory is updated)
+- Reporting - Allow a manager to view reports on sales, inventory, and team member performance. this is an application in the product
+    - Allow a manager to view a report on sales
+    - Allow a manager to view a report on inventory
+    - Allow a manager to view a report on team member performance   
+- Integration with other systems (like payment systems, HR systems, ecomm, etc.)
+    - Allow a manager to integrate with a payment system (like Square or Stripe)
+    - Allow a manager to integrate with an HR system (like Gusto or Paylocity)
+    - Allow a manager to integrate with an ecomm system (like Shopify or BigCommerce)       
+- Security - Allow a manager to secure the system with user authentication and authorization
+    - Allow a manager to create a new user
+    - Allow a manager to edit a user
+    - Allow a manager to delete a user
+    - allow a manager to manage user roles within the team member management application  
+
+## Non-Functional Requirements
+- Performance Requirements
+  - Page load times < 2 seconds
+  - Support for minimum 50 concurrent users
+  - API response time < 500ms
+- Security Requirements
+  - Role-based access control
+  - Data encryption at rest and in transit
+  - Regular security audits
+- Scalability Requirements
+  - Horizontal scaling capability
+  - Database partitioning strategy
+- Availability Requirements
+  - 99.9% uptime
+  - Disaster recovery plan
+  - Backup strategy
+
+## Technical Architecture
+[Add the architecture details from above]
+
+## Integration Specifications
+[Add detailed integration requirements]
+
+## Data Model
+[Add entity relationship diagrams and data structures]
+
+
