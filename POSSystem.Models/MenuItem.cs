@@ -14,6 +14,6 @@ namespace POSSystem.Models
         public bool IsAvailable { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
-        public ICollection<OrderItem> OrderItems {get; set;} = new List<OrderItem>();
+        public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }
