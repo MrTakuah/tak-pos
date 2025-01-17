@@ -19,7 +19,7 @@ namespace POSSystem.Data
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Category).HasMaxLength(50);
 
-                // Seed initial menu items
+                // Seed data - initial menu items that will be created when database is first created
                 entity.HasData(
                     new MenuItem
                     {
@@ -42,6 +42,29 @@ namespace POSSystem.Data
                         CreatedAt = DateTime.UtcNow
                     }
                 );
+            });
+
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.Property(e => e.Status).IsRequired().HasMaxLength(50);
+                
+                // Configure one-to-many relationship with OrderItems
+                entity.HasMany(o => o.OrderItems)
+                      .WithOne(oi => oi.Order)
+                      .HasForeignKey(oi => oi.OrderId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<OrderItem>(entity =>
+            {
+                entity.Property(e => e.Quantity).IsRequired().HasColumnType("int(18,2)");
+                entity.Property(e => e.UnitPrice).HasColumnType("decimal(18,2)");
+                entity.Property(e => e.Subtotal).HasColumnType("decimal(18,2)");
+
+                // Configure relationship with MenuItem
+                entity.HasOne(oi => oi.MenuItem)
+                      .WithMany(m => m.OrderItems)
+                      .HasForeignKey(oi => oi.MenuItemId);
             });
         }
     }
